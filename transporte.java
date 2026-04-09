@@ -18,8 +18,6 @@ public class transporte {
         System.out.println("INGRESE UNA OPCION");
         option = sc.nextInt();
         switch (option) {
-
-
                 case 2:
                 System.out.println("INGRESE LA DISTANCIA EN KM");
                 double distancia = sc.nextDouble();
@@ -31,7 +29,8 @@ public class transporte {
                 } else {
                     precio = distancia * 10;
                 }
-
+                System.out.println("EL VALOR DEL TRANSPORTE TERRESTRE ES: " + precio);
+                break;
             } 
         }while (option != 3);
     }
