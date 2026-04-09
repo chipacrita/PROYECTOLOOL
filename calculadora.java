@@ -24,7 +24,20 @@ public class calculadora {
                     double fahrenheit = (celsius * 9 / 5) + 32;
                     System.out.println("LA TEMPERATURA EN FARHENHEIT ES: " + fahrenheit);
                     break;
+                case 2:
+                    System.out.println("INGRESE EL VALOR DEL PRODUCTO");
+                    double valorProducto = sc.nextDouble();
+                    double iva = valorProducto * 0.15;
+                    double total = valorProducto + iva;
+                    System.out.println("EL VALOR TOTAL DEL PRODUCTO CON IVA ES: " + total);
+                    break;
+                case 3:
+                    System.out.println("SALIENDO DEL PROGRAMA...");
+                    break;
+                default:
+                    System.out.println("OPCION NO VALIDA, POR FAVOR INGRESE UNA OPCION ENTRE 1 Y 3");
             }
+
         } while (opcion != 3);
     }
 }
