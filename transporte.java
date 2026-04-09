@@ -1,6 +1,8 @@
 
 import java.util.Scanner;
 
+import javax.swing.JOptionPane;
+
 //1.Mediante la edad calcular el precio del boleto de avion
 //Precio del boleto edad (<18 50%, >=65 75%)
 //2.Calcular el valor del transporte terreste por km
@@ -31,7 +33,24 @@ public class transporte {
                 }
                 System.out.println("EL VALOR DEL TRANSPORTE TERRESTRE ES: " + precio);
                 break;
-            } 
-        }while (option != 3);
+            
+            case 1:
+                    int edad;
+                    double total;
+
+                    edad = Integer.parseInt(JOptionPane.showInputDialog("Ingrese su edad:"));
+                    System.out.println("");
+                    precio = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el precio: "));
+                    if (edad < 18) {
+                        total = precio * 0.5;
+                    } else if (edad >= 65){
+                        total = precio * 0.75;
+                    }else {
+                        total = precio;
+                    }
+                    JOptionPane.showMessageDialog(null, "El precio a pagar es: " +total);
+                    break;                   
+                }
+        } while (option != 3);
     }
 }
