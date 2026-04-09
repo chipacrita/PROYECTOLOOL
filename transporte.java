@@ -19,7 +19,20 @@ public class transporte {
         option = sc.nextInt();
         switch (option) {
 
-            }
-        } while (option != 3);
+
+                case 2:
+                System.out.println("INGRESE LA DISTANCIA EN KM");
+                double distancia = sc.nextDouble();
+                double precio;
+                if (distancia <= 100) {
+                    precio =distancia * 5;
+                } else if (distancia <=200) {
+                    precio = distancia * 7.5;
+                } else {
+                    precio = distancia * 10;
+                }
+
+            } while (option != 3);
+        }
     }
 }
