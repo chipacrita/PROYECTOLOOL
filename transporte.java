@@ -32,7 +32,7 @@ public class transporte {
                     precio = distancia * 10;
                 }
 
-            } while (option != 3);
-        }
+            } 
+        }while (option != 3);
     }
 }
